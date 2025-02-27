@@ -37,9 +37,11 @@ const Login = () => {
     }
   }
   return (
-    <div className='flex flex-col items-center h-screen justify-center bg-gradient-to-b from-teal-600 from-50% to-gray-100 to-50% space-y-6'>
-      <h2 className='font-pacific text-3xl text-white'>Employee Management System</h2>
-      <div className='border shadow p-6 w-80 bg-white'>
+<div
+  className="flex flex-col items-center h-screen justify-center space-y-6"
+  style={{ backgroundImage: "url('/bg.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+><h2 className='font-pacific text-3xl text-gray'>Employee Management System</h2>
+      <div className='border shadow p-6 w-80 bg-white-800'>
         <h2 className='text-2xl font-bold mb-4'>Login</h2>
         {error&&<p className='text-red-600'>{error}</p>}
         <form onSubmit={handleSubmit}>
@@ -59,11 +61,11 @@ const Login = () => {
               <input type='checkbox' className='form-checkbox' />
               <span className='ml-2 text-gray-700 my-4'>Remember me</span>
             </label>
-            <Link to='/reset' className='text-teal-600'>Forgot Password</Link>
+            <Link to='/reset' className='text-black-800'>Forgot Password</Link>
 
           </div>
           <div className='mb-4'>
-            <button type='submit' className='w-full bg-teal-600 text-white py-2'>Login</button>
+            <button type='submit' className='font-bold w-full bg-black text-white py-2 rounded-md'>Login</button>
           </div>
         </form>
       </div>
