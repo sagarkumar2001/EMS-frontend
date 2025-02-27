@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
 import DataTable from 'react-data-table-component';
+
 import { columns, DepartmentButton } from "../../util/DepartmentHelper";
 import axios from 'axios';
 
@@ -12,7 +13,7 @@ const DepartmentList =()=>{
     const fetchDepartments=async()=>{
         setdeptLoading(true);
        try {
-            const response=await axios.get('http://localhost:3000/api/department',{
+            const response=await axios.get('https://ems-backend-dun.vercel.app/api/department',{
                 headers:{
                     "Authorization":`Bearer ${localStorage.getItem('token')}`
                 }

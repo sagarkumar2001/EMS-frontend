@@ -8,7 +8,7 @@ const ForgotEmail=()=>{
         e.preventDefault();
        
         try {
-            const response= await axios.post("http://localhost:3000/api/reset",{email});
+            const response= await axios.post("https://ems-backend-dun.vercel.app/api/reset",{email});
             if(response.data.success){
                alert("Reset link sent successfully")
             }

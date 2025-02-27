@@ -33,7 +33,7 @@ const Add=()=>{
             fromDataObj.append(key,formData[key])
         })
         try {
-            const response=await axios.post('http://localhost:3000/api/employee/add',fromDataObj,{
+            const response=await axios.post('https://ems-backend-dun.vercel.app/api/employee/add',fromDataObj,{
               headers:{
                   "Authorization":`Bearer ${localStorage.getItem("token")}`
               }

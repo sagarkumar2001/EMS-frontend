@@ -22,7 +22,7 @@ const ResetPassword=()=>{
         }
         else{           
             try {
-                const response=await axios.put(`http://localhost:3000/api/reset/verify/${id}/${token}`,setting);
+                const response=await axios.put(`https://ems-backend-dun.vercel.app/api/reset/verify/${id}/${token}`,setting);
                 if(response.data.success){
                     setError("");
                     navigate("/login");

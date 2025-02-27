@@ -12,7 +12,7 @@ const List=()=>{
 
   const fetchLeave = async () => {
       try {
-          const response = await axios.get(`http://localhost:3000/api/leave/${id}/${user.role}`, {
+          const response = await axios.get(`https://ems-backend-dun.vercel.app/api/leave/${id}/${user.role}`, {
               headers: {
                   "Authorization": `Bearer ${localStorage.getItem('token')}`
               }
